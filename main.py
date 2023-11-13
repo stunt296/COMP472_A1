@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import plot_tree
 from sklearn.model_selection import GridSearchCV
+from sklearn.neural_network import MLPClassifier
 
 # Read the CSV files
 penguin_data = pd.read_csv('penguins.csv')
@@ -127,3 +128,67 @@ plt.show()
 top_dt_accuracy_abalone = top_dt_abalone.score(X_test_abalone, y_test_abalone)
 print("Top-DT Accuracy for Abalone:", top_dt_accuracy_abalone)
 
+"""----------------PENGUIN TRAINING - MLP--------------------"""
+
+# Create and train the Base-MLP with default parameters
+mlp_p = MLPClassifier(hidden_layer_sizes=(100, 100), activation='logistic', max_iter=1000, random_state=42)
+mlp_p.fit(X_train_penguin, y_train_penguin)
+
+# Evaluate the Base-MLP
+mlp_p_acc = mlp_p.score(X_test_penguin, y_test_penguin)
+print("Base-MLP Accuracy for Penguin:", mlp_p_acc)
+
+# Define hyperparameters to tune
+param_grid_mlp = {
+    'activation': ['tanh', 'relu'],
+    'hidden_layer_sizes': [(30, 50), (10, 10, 10)],
+    'solver': ['adam', 'sgd'],
+}
+
+# Create an MLP classifier
+top_mlp_p = MLPClassifier(max_iter=1000, random_state=42)
+
+# Perform grid search using cross-validation
+grid_p = GridSearchCV(top_mlp_p, param_grid_mlp, cv=5)
+grid_p.fit(X_train_penguin, y_train_penguin)
+
+# Get the best hyperparameters
+best_p = grid_p.best_params_
+print("Best Hyperparameters for Top-MLP Penguin:", best_p)
+
+# Train the Top-MLP with the best hyperparameters
+top_mlp_p = MLPClassifier(**best_p, max_iter=1000, random_state=42)
+top_mlp_p.fit(X_train_penguin, y_train_penguin)
+
+# Evaluate the Top-MLP
+top_mpl_p_acc = top_mlp_p.score(X_test_penguin, y_test_penguin)
+print("Top-MLP Accuracy for Penguin:", top_mpl_p_acc, "\n")
+
+"""----------------ABALONE TRAINING - MLP--------------------"""
+
+# Create and train the Base-MLP with default parameters
+mpl_a = MLPClassifier(hidden_layer_sizes=(100, 100), activation='logistic', max_iter=1000, random_state=42)
+mpl_a.fit(X_train_abalone, y_train_abalone)
+
+# Evaluate the Base-MLP
+mpl_a_acc = mpl_a.score(X_test_abalone, y_test_abalone)
+print("Base-MLP Accuracy for Abalone:", mpl_a_acc)
+
+# Create an MLP classifier
+top_mpl_a = MLPClassifier(max_iter=1000, random_state=42)
+
+# Perform grid search using cross-validation
+grid_a = GridSearchCV(top_mpl_a, param_grid_mlp, cv=5)
+grid_a.fit(X_train_abalone, y_train_abalone)
+
+# Get the best hyperparameters
+best_a = grid_a.best_params_
+print("Best Hyperparameters for Top-MLP Abalone:", best_a)
+
+# Train the Top-MLP with the best hyperparameters
+top_mpl_a = MLPClassifier(**best_a, max_iter=1000, random_state=42)
+top_mpl_a.fit(X_train_abalone, y_train_abalone)
+
+# Evaluate the Top-MLP
+top_mpl_a_acc = top_mpl_a.score(X_test_abalone, y_test_abalone)
+print("Top-MLP Accuracy for Abalone:", top_mpl_a_acc)
