@@ -1,0 +1,324 @@
+Base Decision Tree for Abalone
+---------------------------------
+(A) Best Hyperparameters for Abalone: {'criterion': 'entropy', 'max_depth': 5, 'min_samples_split': 5}
+Best Hyperparameters for Top-MLP Abalone:{'activation': 'tanh', 'hidden_layer_sizes': (30, 50), 'solver': 'adam'}
+---------------------------------
+(B) Confusion Matrix:
+Base-DT : 
+[[101  36 132]
+ [ 46 169  62]
+ [111  47 132]]
+Top-DT : 
+[[ 71  27 171]
+ [ 25 201  51]
+ [ 58  46 186]]
+Base-MLP : 
+[[ 39  34 196]
+ [  9 205  63]
+ [ 50  52 188]]
+Top-MLP : 
+[[149  39  81]
+ [ 32 221  24]
+ [150  59  81]]
+---------------------------------
+(C) Classification Report:
+Base-DT : 
+              precision    recall  f1-score   support
+
+           F       0.39      0.38      0.38       269
+           I       0.67      0.61      0.64       277
+           M       0.40      0.46      0.43       290
+
+    accuracy                           0.48       836
+   macro avg       0.49      0.48      0.48       836
+weighted avg       0.49      0.48      0.48       836
+
+Top-DT : 
+              precision    recall  f1-score   support
+
+           F       0.46      0.26      0.34       269
+           I       0.73      0.73      0.73       277
+           M       0.46      0.64      0.53       290
+
+    accuracy                           0.55       836
+   macro avg       0.55      0.54      0.53       836
+weighted avg       0.55      0.55      0.53       836
+
+Base-MLP : 
+              precision    recall  f1-score   support
+
+           F       0.40      0.14      0.21       269
+           I       0.70      0.74      0.72       277
+           M       0.42      0.65      0.51       290
+
+    accuracy                           0.52       836
+   macro avg       0.51      0.51      0.48       836
+weighted avg       0.51      0.52      0.48       836
+
+Top-MLP : 
+              precision    recall  f1-score   support
+
+           F       0.45      0.55      0.50       269
+           I       0.69      0.80      0.74       277
+           M       0.44      0.28      0.34       290
+
+    accuracy                           0.54       836
+   macro avg       0.53      0.54      0.53       836
+weighted avg       0.53      0.54      0.52       836
+
+---------------------------------
+(D) Accuracy, Macro-average F1, and Weighted-average F1:
+Accuracy for Base-DT: 0.4809
+
+
+Accuracy for Top-DT: 0.5478
+
+
+Accuracy for Base-MLP: 0.5167
+
+
+Accuracy for Top-MLP: 0.5395
+
+
+Macro-average F1 for Top-DT: 0.5327
+
+
+Macro-average F1 for Base-DT: 0.4836
+
+
+Macro-average F1 for Base-MLP: 0.4815
+
+
+Macro-average F1 for Top-MLP: 0.5262
+
+
+Weighted-average F1 for Base-DT: 0.4837
+
+
+Weighted-average F1 for Top-DT: 0.5346
+
+
+Weighted-average F1 for Base-MLP: 0.4845
+
+
+Weighted-average F1 for Top-MLP: 0.5236
+
+
+Base Decision Tree for Abalone
+---------------------------------
+(A) Best Hyperparameters for Abalone: {'criterion': 'entropy', 'max_depth': 5, 'min_samples_split': 5}
+Best Hyperparameters for Top-MLP Abalone:{'activation': 'tanh', 'hidden_layer_sizes': (30, 50), 'solver': 'adam'}
+---------------------------------
+(B) Confusion Matrix:
+Base-DT : 
+[[100  33 136]
+ [ 46 166  65]
+ [108  44 138]]
+Top-DT : 
+[[ 71  27 171]
+ [ 25 201  51]
+ [ 58  46 186]]
+Base-MLP : 
+[[ 39  34 196]
+ [  9 205  63]
+ [ 50  52 188]]
+Top-MLP : 
+[[149  39  81]
+ [ 32 221  24]
+ [150  59  81]]
+---------------------------------
+(C) Classification Report:
+Base-DT : 
+              precision    recall  f1-score   support
+
+           F       0.39      0.37      0.38       269
+           I       0.68      0.60      0.64       277
+           M       0.41      0.48      0.44       290
+
+    accuracy                           0.48       836
+   macro avg       0.49      0.48      0.49       836
+weighted avg       0.49      0.48      0.49       836
+
+Top-DT : 
+              precision    recall  f1-score   support
+
+           F       0.46      0.26      0.34       269
+           I       0.73      0.73      0.73       277
+           M       0.46      0.64      0.53       290
+
+    accuracy                           0.55       836
+   macro avg       0.55      0.54      0.53       836
+weighted avg       0.55      0.55      0.53       836
+
+Base-MLP : 
+              precision    recall  f1-score   support
+
+           F       0.40      0.14      0.21       269
+           I       0.70      0.74      0.72       277
+           M       0.42      0.65      0.51       290
+
+    accuracy                           0.52       836
+   macro avg       0.51      0.51      0.48       836
+weighted avg       0.51      0.52      0.48       836
+
+Top-MLP : 
+              precision    recall  f1-score   support
+
+           F       0.45      0.55      0.50       269
+           I       0.69      0.80      0.74       277
+           M       0.44      0.28      0.34       290
+
+    accuracy                           0.54       836
+   macro avg       0.53      0.54      0.53       836
+weighted avg       0.53      0.54      0.52       836
+
+---------------------------------
+(D) Accuracy, Macro-average F1, and Weighted-average F1:
+Accuracy for Base-DT: 0.4833
+
+
+Accuracy for Top-DT: 0.5478
+
+
+Accuracy for Base-MLP: 0.5167
+
+
+Accuracy for Top-MLP: 0.5395
+
+
+Macro-average F1 for Top-DT: 0.5327
+
+
+Macro-average F1 for Base-DT: 0.4866
+
+
+Macro-average F1 for Base-MLP: 0.4815
+
+
+Macro-average F1 for Top-MLP: 0.5262
+
+
+Weighted-average F1 for Base-DT: 0.4868
+
+
+Weighted-average F1 for Top-DT: 0.5346
+
+
+Weighted-average F1 for Base-MLP: 0.4845
+
+
+Weighted-average F1 for Top-MLP: 0.5236
+
+
+Base Decision Tree for Abalone
+---------------------------------
+(A) Best Hyperparameters for Abalone: {'criterion': 'entropy', 'max_depth': 5, 'min_samples_split': 2}
+Best Hyperparameters for Top-MLP Abalone:{'activation': 'tanh', 'hidden_layer_sizes': (30, 50), 'solver': 'adam'}
+---------------------------------
+(B) Confusion Matrix:
+Base-DT : 
+[[104  34 131]
+ [ 48 166  63]
+ [107  45 138]]
+Top-DT : 
+[[ 71  27 171]
+ [ 25 201  51]
+ [ 58  46 186]]
+Base-MLP : 
+[[ 39  34 196]
+ [  9 205  63]
+ [ 50  52 188]]
+Top-MLP : 
+[[149  39  81]
+ [ 32 221  24]
+ [150  59  81]]
+---------------------------------
+(C) Classification Report:
+Base-DT : 
+              precision    recall  f1-score   support
+
+           F       0.40      0.39      0.39       269
+           I       0.68      0.60      0.64       277
+           M       0.42      0.48      0.44       290
+
+    accuracy                           0.49       836
+   macro avg       0.50      0.49      0.49       836
+weighted avg       0.50      0.49      0.49       836
+
+Top-DT : 
+              precision    recall  f1-score   support
+
+           F       0.46      0.26      0.34       269
+           I       0.73      0.73      0.73       277
+           M       0.46      0.64      0.53       290
+
+    accuracy                           0.55       836
+   macro avg       0.55      0.54      0.53       836
+weighted avg       0.55      0.55      0.53       836
+
+Base-MLP : 
+              precision    recall  f1-score   support
+
+           F       0.40      0.14      0.21       269
+           I       0.70      0.74      0.72       277
+           M       0.42      0.65      0.51       290
+
+    accuracy                           0.52       836
+   macro avg       0.51      0.51      0.48       836
+weighted avg       0.51      0.52      0.48       836
+
+Top-MLP : 
+              precision    recall  f1-score   support
+
+           F       0.45      0.55      0.50       269
+           I       0.69      0.80      0.74       277
+           M       0.44      0.28      0.34       290
+
+    accuracy                           0.54       836
+   macro avg       0.53      0.54      0.53       836
+weighted avg       0.53      0.54      0.52       836
+
+---------------------------------
+(D) Accuracy, Macro-average F1, and Weighted-average F1:
+Accuracy for Base-DT: 0.4880
+
+
+Accuracy for Top-DT: 0.5478
+
+
+Accuracy for Base-MLP: 0.5167
+
+
+Accuracy for Top-MLP: 0.5395
+
+
+Macro-average F1 for Top-DT: 0.5327
+
+
+Macro-average F1 for Base-DT: 0.4912
+
+
+Macro-average F1 for Base-MLP: 0.4815
+
+
+Macro-average F1 for Top-MLP: 0.5262
+
+
+Weighted-average F1 for Base-DT: 0.4914
+
+
+Weighted-average F1 for Top-DT: 0.5346
+
+
+Weighted-average F1 for Base-MLP: 0.4845
+
+
+Weighted-average F1 for Top-MLP: 0.5236
+
+
+(A) Average Accuracy:0.4856459330143541
+(A) Variance Accuracy:5.723312195233553e-06
+(B) Average Macro-F1:0.48889117872300925
+(B) Variance Macro-F1:5.461704512317805e-06
+(C) Average Weighted-F1 :0.48911431324005183
+(C) Variance Weighted-F1 :5.318917824113493e-06
